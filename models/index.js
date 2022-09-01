@@ -4,7 +4,7 @@ const path = require('path');
 const Sequelize = require('sequelize');
 
 const env = process.env.NODE_ENV ? 'production' : 'development';
-const config = require(path.join(__dirname, '..', 'config', 'db.json'))[
+const config = require(path.join(__dirname, 'home/hosting_users/bcd1031/apps/bcd1031_meetgoga', 'config', 'db.json'))[
     env
     ];
 const db = {};
@@ -36,34 +36,34 @@ db.sequelize
     });
 
 // 테이블 생성
-db.User = require('./user')(sequelize, Sequelize);
-db.Guide = require('./guide')(sequelize, Sequelize);
-db.GuideGrade = require('./guide_grade')(sequelize, Sequelize);
-db.GuideMark = require('./guide_mark')(sequelize, Sequelize);
-db.GuideReview = require('./guide_review')(sequelize, Sequelize);
-db.Package = require('./package')(sequelize, Sequelize);
-db.PackageGrade = require('./package_grade')(sequelize, Sequelize);
-db.PackageMark = require('./package_mark')(sequelize, Sequelize);
-db.PackageReview = require('./package_review')(sequelize, Sequelize);
-db.Img = require('./img')(sequelize, Sequelize);
-db.Member = require('./member')(sequelize, Sequelize);
-db.ReviewComment = require('./review_comment')(sequelize, Sequelize);
-db.ReviewLike = require('./review_like')(sequelize, Sequelize);
+db.User = require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/user')(sequelize, Sequelize);
+db.Guide = require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/guide')(sequelize, Sequelize);
+db.GuideGrade = require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/guide_grade')(sequelize, Sequelize);
+db.GuideMark = require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/guide_mark')(sequelize, Sequelize);
+db.GuideReview = require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/guide_review')(sequelize, Sequelize);
+db.Package = require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/package')(sequelize, Sequelize);
+db.PackageGrade = require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/package_grade')(sequelize, Sequelize);
+db.PackageMark = require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/package_mark')(sequelize, Sequelize);
+db.PackageReview = require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/package_review')(sequelize, Sequelize);
+db.Img = require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/img')(sequelize, Sequelize);
+db.Member = require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/member')(sequelize, Sequelize);
+db.ReviewComment = require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/review_comment')(sequelize, Sequelize);
+db.ReviewLike = require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/review_like')(sequelize, Sequelize);
 
 
 // 관계형 지정
-require('./user/foreignKey')(db);
-require('./guide/foreignKey')(db);
-require('./guide_grade/foreignKey')(db);
-require('./guide_mark/foreignKey')(db);
-require('./guide_review/foreignKey')(db);
-require('./package/foreignKey')(db);
-require('./package_grade/foreignKey')(db);
-require('./package_mark/foreignKey')(db);
-require('./package_review/foreignKey')(db);
-require('./img/foreignKey')(db);
-require('./member/foreignKey')(db);
-require('./review_comment/foreignKey')(db);
-require('./review_like/foreignKey')(db);
+require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/user/foreignKey')(db);
+require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/guide/foreignKey')(db);
+require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/guide_grade/foreignKey')(db);
+require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/guide_mark/foreignKey')(db);
+require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/guide_review/foreignKey')(db);
+require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/package/foreignKey')(db);
+require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/package_grade/foreignKey')(db);
+require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/package_mark/foreignKey')(db);
+require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/package_review/foreignKey')(db);
+require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/img/foreignKey')(db);
+require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/member/foreignKey')(db);
+require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/review_comment/foreignKey')(db);
+require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/review_like/foreignKey')(db);
 
 module.exports = db;

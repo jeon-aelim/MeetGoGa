@@ -1,9 +1,9 @@
 const guideService =  require('./guideService');
 const path = require('path');
 
-const hashing = require(path.join(__dirname, '../../config', 'hashing.js'));
-const salt = require(path.join(__dirname, '../../config', 'config.json'));
-const jwt = require('../../config/jwt');
+const hashing = require(path.join(__dirname, 'home/hosting_users/bcd1031/apps/bcd1031_meetgoga/config', 'hashing.js'));
+const salt = require(path.join(__dirname, 'home/hosting_users/bcd1031/apps/bcd1031_meetgoga/config', 'config.json'));
+const jwt = require('home/hosting_users/bcd1031/apps/bcd1031_meetgoga/config/jwt');
 
 module.exports = {
 
