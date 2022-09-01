@@ -2,7 +2,7 @@
     "development": {
       "username": "bcd1031",
       "password": "dlekqhd11!@",
-      "database": "meetgoga",
+      "database": "bcd1031",
       "host": "meetgoga.cafe24app.com",
       "port": "3306",
       "dialect": "mysql",
@@ -12,7 +12,7 @@
     "production": {
       "username": "bcd1031",
       "password": "dlekqhd11!@",
-      "database": "meetgoga",
+      "database": "bcd1031",
       "host": "meetgoga.cafe24app.com",
       "port": "3306",
       "dialect": "mysql",
@@ -20,3 +20,4 @@
       "logging": true
     }
   }
+  //
