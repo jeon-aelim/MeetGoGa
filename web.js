@@ -13,10 +13,10 @@
 const express = require('express');
 const router = require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/routes');
 const sequelize = require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/models').sequelize;
-const methodOverride = require('method-override');
+const methodOverride = require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/node_modules/@types/method-override/index');
 const http = require('http');
-const cors = require('cors');
-const ejs = require("ejs");
+const cors = require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/node_modules/@types/cors/index');
+const ejs = require("/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/node_modules/@types/ejs/index");
 
 var url = require('url');
 var fs = require('fs');
