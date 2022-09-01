@@ -11,12 +11,12 @@
 // })
 
 const express = require('express');
-const router = require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/routes');
-const sequelize = require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/models').sequelize;
-const methodOverride = require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/node_modules/method-override/index');
+const router = require('/home/hosting_users/bcd1031/apps/meetgoga/routes');
+const sequelize = require('/home/hosting_users/bcd1031/apps/meetgoga/models').sequelize;
+const methodOverride = require('/home/hosting_users/bcd1031/apps/meetgoga/node_modules/method-override/index');
 const http = require('http');
-const cors = require('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/node_modules/cors/index');
-const ejs = require("/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/node_modules/ejs/index");
+const cors = require('/home/hosting_users/bcd1031/apps/meetgoga/node_modules/cors/libs/index');
+const ejs = require("ejs");
 
 var url = require('url');
 var fs = require('fs');

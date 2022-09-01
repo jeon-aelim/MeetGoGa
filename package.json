@@ -2,10 +2,10 @@
   "name": "meetgo",
   "version": "1.0.0",
   "description": "",
-  "main": "/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/web.js",
+  "main": "/home/hosting_users/bcd1031/apps/meetgoga/web.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node /home/hosting_users/bcd1031/apps/bcd1031_meetgoga/web.js"
+    "start": "node /home/hosting_users/bcd1031/apps/meetgoga/web.js"
   },
   "author": "",
   "license": "ISC",
