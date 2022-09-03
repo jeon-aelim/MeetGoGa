@@ -1,8 +1,8 @@
-const sequelize = require('home/hosting_users/bcd1031/apps/bcd1031_meetgoga/models').sequelize;
+const sequelize = require('../../models').sequelize;
 const {
     Guide,
     Package
-} = require('home/hosting_users/bcd1031/apps/bcd1031_meetgoga/models');
+} = require('../../models');
 sequelize.query("SET NAMES utf8mb4");
 
 module.exports = {
