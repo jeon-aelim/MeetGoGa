@@ -17,6 +17,7 @@ const methodOverride = require('method-override');
 const http = require('http');
 const cors = require('cors');
 const ejs = require("ejs");
+const JSON = require("json");
 
 var url = require('url');
 var fs = require('fs');
