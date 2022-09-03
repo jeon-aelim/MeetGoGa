@@ -41,7 +41,7 @@ app.use('/', router);
 app.get('/', (req, res) => {
   res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/public/js/example.json');
   const results = JSON.parse(data.toString('utf8mb4'));
-  res.render('index', { title:"meetgoga", results });
+  res.sendFile('index', { title:"meetgoga", results });
 });
 http.createServer(app).listen(8002, () => {
   console.log("Express Server Start");
