@@ -4,7 +4,7 @@ const path = require('path');
 const Sequelize = require('sequelize');
 
 const env = process.env.NODE_ENV ? 'production' : 'development';
-const config = require(path.join(__dirname, 'home/hosting_users/bcd1031/apps/bcd1031_meetgoga', 'config', 'db.json'))[
+const config = require(path.join(__dirname, '..', 'config', 'db.json'))[
     env
     ];
 const db = {};
