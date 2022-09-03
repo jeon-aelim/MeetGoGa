@@ -11,8 +11,8 @@
 // })
 
 const express = require('express');
-const router = require('home/hosting_users/bcd1031/apps/bcd1031_meetgoga/routes');
-const sequelize = require('home/hosting_users/bcd1031/apps/bcd1031_meetgoga/models').sequelize;
+const router = require('./routes');
+const sequelize = require('./models').sequelize;
 const methodOverride = require('method-override');
 const http = require('http');
 const cors = require('cors');
