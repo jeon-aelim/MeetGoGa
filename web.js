@@ -17,10 +17,11 @@ const methodOverride = require('method-override');
 const http = require('http');
 const cors = require('cors');
 const ejs = require("ejs");
-const JSON = require("json");
+// const JSON = require("json");
 
 var url = require('url');
 var fs = require('fs');
+const { reset } = require('nodemon');
 
 // 내방식대로 바꿔서 코딩하는것은 실패 다시 해봐야할 것 새로운 파일을 만들어서 저 방식대로 해보기
 
@@ -39,9 +40,10 @@ sequelize.sync();
 app.use('/', router);
 
 app.get('/', (req, res) => {
-  res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/public/js/example.json');
-  const results = JSON.parse(data.toString('utf8mb4'));
-  res.sendFile('index', { title:"meetgoga", results });
+  // res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/public/js/example.json');
+  // const results = JSON.parse(data.toString('utf8mb4'));
+  // res.sendFile('index', { title:"meetgoga", results });
+  res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/views/index.ejs')
 });
 http.createServer(app).listen(8002, () => {
   console.log("Express Server Start");
