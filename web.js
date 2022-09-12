@@ -45,6 +45,13 @@ app.get('/', (req, res) => {
   // res.sendFile('index', { title:"meetgoga", results });
   res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/views/index.ejs')
 });
+
+app.get('/test', (req, res) => {
+  // res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/public/js/example.json');
+  // const results = JSON.parse(data.toString('utf8mb4'));
+  // res.sendFile('index', { title:"meetgoga", results });
+  res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/views/meetgo.html')
+});
 http.createServer(app).listen(8002, () => {
   console.log("Express Server Start");
 });
