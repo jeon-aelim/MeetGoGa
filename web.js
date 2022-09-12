@@ -35,7 +35,7 @@ app.use(methodOverride());
 app.use(cors());
 app.engine("html", ejs.renderFile);
 
-var resourcePath='C:\Users\82109\Server\RomanFIrst-1\html';
+// var resourcePath='C:\Users\82109\Server\RomanFIrst-1\html';
 sequelize.sync();
 app.use('/', router);
 

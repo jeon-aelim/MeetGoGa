@@ -2,7 +2,7 @@ const sequelize = require('../../models').sequelize;
 const {
     GuideMark
 } = require('../../models');
-sequelize.query("SET NAMES utf8mb4");
+sequelize.query("SET NAMES utf8");
 
 module.exports = {
     guideMark: (guideID, userID) => {

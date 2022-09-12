@@ -2,7 +2,7 @@ const sequelize = require('../../models').sequelize;
 const {
     ReviewLike
 } = require('../../models');
-sequelize.query("SET NAMES utf8mb4");
+sequelize.query("SET NAMES utf8");
 
 module.exports = {
     reviewLike: (guideID, userID) => {

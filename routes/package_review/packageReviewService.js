@@ -3,7 +3,7 @@ const moment = require("moment");
 const {
     PackageReview
 } = require("../../models");
-sequelize.query("SET NAMES utf8mb4");
+sequelize.query("SET NAMES utf8");
 require("moment-timezone");
 moment.tz.setDefault("Asia/Seoul");
 
