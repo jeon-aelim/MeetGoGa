@@ -35,7 +35,6 @@ module.exports = {
 
                 offset: offset,
                 limit: 5,
-                raw: true
 
                 //   {
                 //     model: Comment,
