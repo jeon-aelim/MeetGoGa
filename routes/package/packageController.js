@@ -36,7 +36,8 @@ module.exports = {
                 if (result) {
                     obj['reqPackageList'] = result;
                     obj['suc'] = true;
-                    res.send(obj);
+                    // res.send(obj);
+                    res.send(result);
                     console.log("reqPackage list is succeed");
                 } else {
                     obj['suc'] = false;
