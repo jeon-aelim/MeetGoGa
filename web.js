@@ -40,15 +40,13 @@ sequelize.sync();
 app.use('/', router);
 
 app.get('/', (req, res) => {
-  // res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/public/js/example.json');
-  // const results = JSON.parse(data.toString('utf8mb4'));
-  // res.sendFile('index', { title:"meetgoga", results });
+  const results = JSON.parse(data.toString('utf8'));
+  res.sendFile('index', { title:"meetgoga", results });
   res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/views/index.ejs')
 });
 
 app.get('/test', (req, res) => {
-  // res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/public/js/example.json');
-  // const results = JSON.parse(data.toString('utf8mb4'));
+  // const results = JSON.parse(data.toString('utf8'));
   // res.sendFile('index', { title:"meetgoga", results });
   res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/views/meetgo.html')
 });
