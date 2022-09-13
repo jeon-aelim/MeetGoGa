@@ -40,8 +40,8 @@ sequelize.sync();
 app.use('/', router);
 
 app.get('/', (req, res) => {
-  const results = JSON.parse(data.toString('utf8'));
-  res.sendFile('index', { title:"meetgoga", results });
+  // const results = JSON.parse(data.toString('utf8'));
+  // res.sendFile('index', { title:"meetgoga", results });
   res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/views/index.ejs')
 });
 
