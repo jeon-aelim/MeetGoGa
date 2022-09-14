@@ -11,7 +11,7 @@ const imageFilter = (req, file, cb) => {
 var storage = multer.diskStorage({
    destination: (req, file, cb) => {
      // 서버에 저장될 위치
-     cb(null, path.join(__dirname, "/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/images"))
+     cb(null, path.join(__dirname, "\home\hosting_users\bcd1031\apps\bcd1031_meetgoga\images"))
    },
 
   filename: (req, file, cb) => {
