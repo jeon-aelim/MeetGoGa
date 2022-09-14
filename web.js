@@ -57,7 +57,7 @@ app.get('/test', (req, res) => {
 
 const fileStorage = multer.diskStorage({ // 저장 방식
   destination: (req,file,cb)=>{ // 저장되는 곳 지정 
-      cb(null, 'images');
+      cb(null, '/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/images');
   },
   filename: (req,file,cb)=>{ // 저장되는 이름 지정 
       cb(null, Date.now() + path.extname(file.originalname));
