@@ -17,13 +17,16 @@ const methodOverride = require('method-override');
 const http = require('http');
 const cors = require('cors');
 const ejs = require("ejs");
+
+const multer = require("multer");
+
+
 // const JSON = require("json");
 
 var url = require('url');
 var fs = require('fs');
 const { reset } = require('nodemon');
 
-// 내방식대로 바꿔서 코딩하는것은 실패 다시 해봐야할 것 새로운 파일을 만들어서 저 방식대로 해보기
 
 const app = express();
 app.use(express.urlencoded({extended: false}));
@@ -54,3 +57,21 @@ http.createServer(app).listen(8002, () => {
   console.log("Express Server Start");
 });
 
+// const fileStorage = multer.diskStorage({ // 저장 방식
+//   destination: (req,file,cb)=>{ // 저장되는 곳 지정 
+//       cb(null, 'images');
+//   },
+//   filename: (req,file,cb)=>{ // 저장되는 이름 지정 
+//       cb(null, file.filename+'-'+file.originalname);
+//   }
+// });
+
+// const fileFilter = (req,file,cb) => { // 확장자 필터링 
+//   if(file.mimetype === 'image/png' || file.mimetype === 'image/jpg' || file.mimetype === 'image/jpeg'){
+//       cb(null,true); // 해당 mimetype만 받겠다는 의미 
+//   }
+//   else{ // 다른 mimetype은 저장되지 않음 
+//       cb(null,false);
+//   }
+// };
+// app.use(multer({storage :fileStorage, fileFilter:fileFilter}).single('image')); // 라우터 
