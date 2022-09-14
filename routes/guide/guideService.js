@@ -1,7 +1,8 @@
 const sequelize = require('../../models').sequelize;
 const {
     Guide,
-    Package
+    Package,
+    Img
 } = require('../../models');
 sequelize.query("SET NAMES utf8");
 
@@ -62,7 +63,7 @@ module.exports = {
         })
     },
 
-    makePackage: (body) => {
+    makePackage: (body, imgData) => {
         return new Promise((resolve) => {
             Package.create({
                 package_title: body.package_title,
@@ -74,21 +75,52 @@ module.exports = {
                 package_price: body.package_price,
                 package_kakao_url: body.package_kakao_url,
                 guide_id: body.guide_id,
-                guide_name: body.guide_name
+                // guide_name: body.guide_name
             })
-                .then((result) => {
-                    console.log(result);
-                    result !== null ? resolve(result) : resolve(false)
+            .then(async (result) => {
+                let obj = {};
+                let results = [];
+      
+                if (imgData !== null) {
+                  const promises = imgData.map(
+                    async (value, index, array) =>
+                      await Img.create({
+                        img_url: array[index].path,
+                        package_id: result.package_id,
+                      })
+                        .then((res) => results.push(res))
+                        .catch((err) => {
+                          resolve("err");
+                          console.log(err);
+                        })
+                  );
+                  await Promise.all(promises);
+                }
+      
+                obj["package"] = result;
+                obj["img"] = results;
+      
+                obj !== null ? resolve(obj) : resolve(false);
+              })
+              .catch((err) => {
+                resolve("err");
+                console.log(err);
+              });
+          });
+        },
+    //             .then((result) => {
+    //                 console.log(result);
+    //                 result !== null ? resolve(result) : resolve(false)
 
-                    console.log(result);
-                    result !== null ? resolve(result) : resolve(false)
-                })
-                .catch((err) => {
-                    resolve(false);
-                    throw err;
-                })
-        })
-    },
+    //                 console.log(result);
+    //                 result !== null ? resolve(result) : resolve(false)
+    //             })
+    //             .catch((err) => {
+    //                 resolve(false);
+    //                 throw err;
+    //             })
+    //     })
+    // },
 
     remakePackage: (body) => {
         return new Promise((resolve) => {

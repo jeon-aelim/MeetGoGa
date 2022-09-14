@@ -48,6 +48,7 @@ module.exports = (sequelize, DataTypes) => {
             package_kakao_url: {
                 type: DataTypes.STRING
             },
+            
 
         },
         

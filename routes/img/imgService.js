@@ -6,10 +6,10 @@ sequelize.query("SET NAMES utf8");
 
 
 module.exports = {
-    img: (body, imageUrl) => {
+    img: (body) => {
         return new Promise((resolve) => {
             Img.create({
-                img_url: imageUrl,
+                img_url: body.img_url,
                 package_id: body.package_id,
                 guide_review_id: body.guide_review_id,
                 package_review_id: body.package_review_id

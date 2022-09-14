@@ -5,6 +5,7 @@ const hashing = require(path.join(__dirname, '../../config', 'hashing.js'));
 const salt = require(path.join(__dirname, '../../config', 'config.json'));
 const jwt = require('../../config/jwt');
 
+
 module.exports = {
 
     login: (req, res) => {
@@ -52,12 +53,14 @@ module.exports = {
 
     makePackage: (req, res) => {
         const body = req.body;
+        const imgData = req.files;
 
-        guideService.makePackage(body)
+        guideService.makePackage(body, imgData)
         .then(result => {
             let obj = {};
             if(result) {
                 obj['suc'] = true;
+                obj['img']= imgData;
                 res.send(obj);
                 console.log("makePackage is succeed");
             }else{

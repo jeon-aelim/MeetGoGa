@@ -4,10 +4,8 @@ module.exports = {
 
     img: (req,res)=> {
         const body = req.body;
-        const image = req.file;
-        const imageUrl = image.path;
 
-        imgService.img(body, imageUrl)
+        imgService.img(body)
         .then(result => {
             let obj = {};
             if(result){
