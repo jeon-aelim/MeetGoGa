@@ -68,7 +68,7 @@ const fileStorage = multer.diskStorage({ // 저장 방식
 const upload = multer({storage: fileStorage});
 
 app.get("/upload", (req,res) => {
-  res.render("upload");
+  res.render("/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/views/upload.ejs");
 });
 
 app.post("/upload", upload.single("image"), (req,res) => {
