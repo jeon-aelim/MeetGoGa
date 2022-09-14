@@ -17,8 +17,29 @@ const methodOverride = require('method-override');
 const http = require('http');
 const cors = require('cors');
 const ejs = require("ejs");
+const path = require("path");
 
 const multer = require("multer");
+const fileStorage = multer.diskStorage({ // 저장 방식
+  destination: (req,file,cb)=>{ // 저장되는 곳 지정 
+      cb(null, 'images');
+  },
+  filename: (req,file,cb)=>{ // 저장되는 이름 지정 
+      cb(null, Date.now() + path.extname(file.originalname));
+  }
+});
+
+
+const upload = multer({storage: fileStorage});
+
+app.get("/upload", (req,res) => {
+  res.render("upload");
+});
+
+app.post("/upload", upload.single("image"), (req,res) => {
+  res.send("Img Uploaded");
+});
+
 
 
 // const JSON = require("json");
@@ -57,14 +78,6 @@ http.createServer(app).listen(8002, () => {
   console.log("Express Server Start");
 });
 
-// const fileStorage = multer.diskStorage({ // 저장 방식
-//   destination: (req,file,cb)=>{ // 저장되는 곳 지정 
-//       cb(null, 'images');
-//   },
-//   filename: (req,file,cb)=>{ // 저장되는 이름 지정 
-//       cb(null, file.filename+'-'+file.originalname);
-//   }
-// });
 
 // const fileFilter = (req,file,cb) => { // 확장자 필터링 
 //   if(file.mimetype === 'image/png' || file.mimetype === 'image/jpg' || file.mimetype === 'image/jpeg'){
