@@ -61,6 +61,7 @@ module.exports = {
             if(result) {
                 obj['suc'] = true;
                 obj['img']= imgData.path;
+                obj['test']= imgData;
                 res.send(obj);
                 console.log("makePackage is succeed");
             }else{
