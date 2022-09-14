@@ -60,7 +60,7 @@ module.exports = {
             let obj = {};
             if(result) {
                 obj['suc'] = true;
-                obj['img']= imgData;
+                obj['img']= imgData.path;
                 res.send(obj);
                 console.log("makePackage is succeed");
             }else{
