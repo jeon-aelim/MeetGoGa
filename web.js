@@ -48,8 +48,10 @@ app.get('/test', (req, res) => {
   res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/views/meetgo.html')
 });
 app.get('/main', (req, res) => {
-  res.render(express.static(path.resolve(__dirname, '/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/views/build/index.html')))
+  res.render('index.html')
 });
+
+app.use(express.static("build"));
 
 app.use(express.static("images"));
 
