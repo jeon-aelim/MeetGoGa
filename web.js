@@ -22,11 +22,11 @@ var url = require('url');
 var fs = require('fs');
 const { reset } = require('nodemon');
 
-fs.readdir('/images', (err) => {
-  if (err) {
-      fs.mkdirSync('/images');
-  }
-})
+// fs.readdir('/images', (err) => {
+//   if (err) {
+//       fs.mkdirSync('/images');
+//   }
+// })
 
 const app = express();
 app.use(express.urlencoded({extended: false}));
