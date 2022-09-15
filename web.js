@@ -32,7 +32,9 @@ app.use(express.static(path.join(__dirname, 'views/build')));
 app.get('/', (req, res) => {
   res.render(path.join(__dirname, '/views/build/index.html'));
 });
-
+app.get('/loginpage', (req, res) => {
+  res.render(path.join(__dirname, '/views/build/index.html'));
+});
 app.use(express.static("images"));
 
 
