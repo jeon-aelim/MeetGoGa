@@ -24,6 +24,11 @@ var url = require('url');
 var fs = require('fs');
 const { reset } = require('nodemon');
 
+fs.readdir('/images', (err) => {
+  if (err) {
+      fs.mkdirSync('/images');
+  }
+})
 
 const app = express();
 app.use(express.urlencoded({extended: false}));
@@ -41,15 +46,16 @@ app.get('/', (req, res) => {
   res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/views/index.ejs')
 });
 
-app.get('/imgTest', (req, res) => {
-  res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/images')
-});
 
 
 app.get('/test', (req, res) => {
   res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/views/meetgo.html')
 });
 
+
+app.get('/main', (req, res) => {
+  res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/build/index.html')
+});
 app.use(express.static("images"));
 
 
