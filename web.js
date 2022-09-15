@@ -47,7 +47,7 @@ app.get('/test', (req, res) => {
   res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/views/meetgo.html')
 });
 app.get('/main', (req, res) => {
-  res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/build/index.html')
+  res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/build')
 });
 app.use(express.static("images"));
 
