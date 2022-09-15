@@ -42,7 +42,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/imgTest', (req, res) => {
-  res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/images/1663168033544-bezkoder-earth.jpg')
+  res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/images')
 });
 
 
