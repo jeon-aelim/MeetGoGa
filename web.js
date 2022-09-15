@@ -17,12 +17,8 @@ const methodOverride = require('method-override');
 const http = require('http');
 const cors = require('cors');
 const ejs = require("ejs");
-const path = require("path");
-
-const multer = require("multer");
 
 
-// const JSON = require("json");
 
 var url = require('url');
 var fs = require('fs');
@@ -31,9 +27,7 @@ const { reset } = require('nodemon');
 
 const app = express();
 app.use(express.urlencoded({extended: false}));
-app.use(express.json()); 
-
-
+app.use(express.json());
 
 app.use(methodOverride());
 app.use(cors());
@@ -43,22 +37,18 @@ app.engine("html", ejs.renderFile);
 sequelize.sync();
 app.use('/', router);
 
-// app.get('/', (req, res) => {
-//   // const results = JSON.parse(data.toString('utf8'));
-//   // res.sendFile('index', { title:"meetgoga", results });
-//   res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/views/index.ejs')
-// });
+app.get('/', (req, res) => {
+  res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/views/index.ejs')
+});
+
+app.get('/imgTest', (req, res) => {
+  res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/images/1663168033544-bezkoder-earth.jpg')
+});
+
 
 app.get('/test', (req, res) => {
-  // const results = JSON.parse(data.toString('utf8'));
-  // res.sendFile('index', { title:"meetgoga", results });
   res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/views/meetgo.html')
 });
-// app.get('/', (req, res) => {
-//   // const results = JSON.parse(data.toString('utf8'));
-//   // res.sendFile('index', { title:"meetgoga", results });
-//   res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/images')
-// });
 
 app.use(express.static("images"));
 
@@ -67,34 +57,3 @@ http.createServer(app).listen(8002, () => {
   console.log("Express Server Start");
 });
 
-
-// const fileStorage = multer.diskStorage({ // 저장 방식
-//   destination: (req,file,cb)=>{ // 저장되는 곳 지정 
-//       cb(null, 'images');
-//   },
-//   filename: (req,file,cb)=>{ // 저장되는 이름 지정 
-//       cb(null, Date.now() + path.extname(file.originalname));
-//       console.log();
-//   }
-// });
-
-
-// const upload = multer({storage: fileStorage});
-
-// app.get("/upload", (req,res) => {
-//   res.render("upload.ejs");
-// });
-
-// app.post("/upload", upload.single("image"), (req,res) => {
-//   res.send("Img Uploaded");
-// });
-
-// const fileFilter = (req,file,cb) => { // 확장자 필터링 
-//   if(file.mimetype === 'image/png' || file.mimetype === 'image/jpg' || file.mimetype === 'image/jpeg'){
-//       cb(null,true); // 해당 mimetype만 받겠다는 의미 
-//   }
-//   else{ // 다른 mimetype은 저장되지 않음 
-//       cb(null,false);
-//   }
-// };
-// app.use(multer({storage :fileStorage, fileFilter:fileFilter}).single('image')); // 라우터 ``````npmm start
