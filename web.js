@@ -34,7 +34,7 @@ app.get('/test', (req, res) => {
 app.use(express.static(path.join(__dirname, 'views/build')));
 
 app.get('/main', (req, res) => {
-  req.sendFile(path.join(__dirname, '/views/build/index.html'));
+  res.render(path.join(__dirname, '/views/build/index.html'));
 });
 
 app.use(express.static("images"));
