@@ -18,8 +18,6 @@ const http = require('http');
 const cors = require('cors');
 const ejs = require("ejs");
 
-
-
 var url = require('url');
 var fs = require('fs');
 const { reset } = require('nodemon');
@@ -45,14 +43,9 @@ app.use('/', router);
 app.get('/', (req, res) => {
   res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/views/index.ejs')
 });
-
-
-
 app.get('/test', (req, res) => {
   res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/views/meetgo.html')
 });
-
-
 app.get('/main', (req, res) => {
   res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/build/index.html')
 });
