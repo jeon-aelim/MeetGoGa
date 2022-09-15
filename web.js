@@ -34,7 +34,7 @@ app.set('views', __dirname + '/views');
 app.use(express.static(path.join(__dirname, 'views/build')));
 
 app.get('/main', (req, res) => {
-  res.render(path.join(__dirname, '/views/build/index.html'));
+  res.send(path.join(__dirname, '/views/build/index.html'));
 });
 
 app.use(express.static("images"));
