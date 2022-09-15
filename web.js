@@ -50,7 +50,6 @@ app.get('/test', (req, res) => {
 app.get('/main', (req, res) => {
   res.render(path.join(__dirname, '/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/build/index.html'))
 });
-app.use(express.static(path.join(__dirname, '/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/build')))
 app.use(express.static("images"));
 
 
