@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "./static/css/main.993d5346.css",
-    "main.js": "./static/js/main.77a219d3.js",
+    "main.css": "/static/css/main.993d5346.css",
+    "main.js": "/static/js/main.77a219d3.js",
     "static/js/787.3b64134f.chunk.js": "/static/js/787.3b64134f.chunk.js",
-    "static/media/Ellipse 38.png": "./static/media/Ellipse 38.5cd1672bc0c672e8992a.png",
+    "static/media/Ellipse 38.png": "/static/media/Ellipse 38.5cd1672bc0c672e8992a.png",
     "index.html": "/index.html",
-    "main.993d5346.css.map": "./static/css/main.993d5346.css.map",
-    "main.77a219d3.js.map": "./static/js/main.77a219d3.js.map",
-    "787.3b64134f.chunk.js.map": "./static/js/787.3b64134f.chunk.js.map"
+    "main.993d5346.css.map": "/static/css/main.993d5346.css.map",
+    "main.77a219d3.js.map": "/static/js/main.77a219d3.js.map",
+    "787.3b64134f.chunk.js.map": "/static/js/787.3b64134f.chunk.js.map"
   },
   "entrypoints": [
-    "./static/css/main.993d5346.css",
-    "./static/js/main.77a219d3.js"
+    "static/css/main.993d5346.css",
+    "static/js/main.77a219d3.js"
   ]
 }
