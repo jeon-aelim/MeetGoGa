@@ -27,6 +27,7 @@ app.use('/', router);
 app.get('/test', (req, res) => {
   res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/views/meetgo.html')
 });
+
 app.use(express.static(path.join(__dirname, 'views/build')));
 
 app.get('/', (req, res) => {
