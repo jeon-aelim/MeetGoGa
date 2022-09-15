@@ -34,7 +34,7 @@ app.get('/main', (req, res) => {
   res.render('index.html')
 });
 
-app.use(express.static(__dirname + "/build"));
+app.use(express.static(__dirname + "/views/build"));
 
 app.use(express.static("images"));
 
