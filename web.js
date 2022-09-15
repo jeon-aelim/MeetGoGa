@@ -24,9 +24,6 @@ app.engine("html", ejs.renderFile);
 sequelize.sync();
 app.use('/', router);
 
-app.get('/', (req, res) => {
-  res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/views/index.ejs')
-});
 app.get('/test', (req, res) => {
   res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/views/meetgo.html')
 });
