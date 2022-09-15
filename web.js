@@ -31,7 +31,7 @@ app.get('/test', (req, res) => {
   res.render('/home/hosting_users/bcd1031/apps/bcd1031_meetgoga/views/meetgo.html')
 });
 app.get('/main', (req, res) => {
-  res.render('index.html')
+  res.render('/build/index.html')
 });
 
 app.use(express.static(__dirname + "/views/build"));
