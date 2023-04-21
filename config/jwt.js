@@ -3,11 +3,11 @@ const secretKey = require('../config/secretkey').secretKey;
 const options = require('../config/secretkey').option;
 
 module.exports = {
-    sign: (guide) => {
+    sign: (body) => {
 
         const payload = {
-            id: guide.guide_id,
-            name: guide.guide_nickname
+            id: body.guide_id,
+            name: body.guide_nickname
         };
 
         const result = {

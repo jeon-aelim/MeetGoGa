@@ -3,7 +3,7 @@ const path = require('path');
 
 const hashing = require(path.join(__dirname, '../../config', 'hashing.js'));
 const salt = require(path.join(__dirname, '../../config', 'config.json'));
-const jwt = require('../../config/jwt');
+const jwt = require('../../middlewares/auth').sign;
 
 
 module.exports = {
@@ -11,7 +11,8 @@ module.exports = {
     login: (req, res) => {
         const body = req.body;
         const hash = hashing.enc(body.guide_password, salt);
-        const token = jwt.sign(body);
+        const token = jwt(body); // token 생성
+
         guideService.login(body, hash)
             .then(result => {
                 let obj = {};
